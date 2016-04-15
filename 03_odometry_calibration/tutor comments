@@ -1,0 +1,3 @@
+* function affineTransformationToPose
+
+You did not consider all the cases of the sign of the angle, here it works because angle is less than 90. It is better to use atan2 function, because it takes into account the sign of both arguments in order to determine the quadrant.

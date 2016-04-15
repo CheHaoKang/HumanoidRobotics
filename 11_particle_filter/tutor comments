@@ -1,0 +1,5 @@
+function integrateObservation:
+
+Update the weight by multiplying the old weight by the observation probability:
+
+particles[i].weight = particles[i].weight * gaussianProbability(getDistanceToNearestLight(particles[i].x)-measurement, stdev);

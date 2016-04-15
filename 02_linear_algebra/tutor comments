@@ -1,0 +1,7 @@
+* function: isLinearIndependent
+use a for loop instead of assigning the A matrix elements one-by-one. 
+Hint: you will need to use a.size().
+------------------------------------------------------------------
+* function: solveLinearSystem
+ it is correct, however it is better to solve it using fullPivLu()
+ instead of colPivHouseholderQr(). fullPivLu() is more accurate.

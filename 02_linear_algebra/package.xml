@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package>
+  <name>linear_algebra</name>
+  <version>0.0.1</version>
+  <description>Exercise on linear algebra and the Eigen library</description>
+  <maintainer email="sosswald@cs.uni-bonn.de">Stefan Osswald</maintainer>
+  <author email="s6zdmilc@uni-bonn.de">Zdravko Milcheski</author>
+  <author email="s6mdazim@uni-bonn.de">Md Aman Azim</author>
+  <author email="deckenkang66@gmail.com">Che-Hao Kang</author>
+
+  <license>Internal use only</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>cmake_modules</build_depend>
+  <build_depend>roscpp</build_depend>
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>cmake_modules</run_depend>
+
+  <export>
+  </export>
+</package>

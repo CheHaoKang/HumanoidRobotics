@@ -1,0 +1,6 @@
+function planPath:
+
+It could pass the test case, but the step of adding the current node to the closed list must be done before expanding that node:
+
+closedList.add(currentNode);
+expandNode(currentNode, goalNode, openList, closedList);

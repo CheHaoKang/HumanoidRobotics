@@ -1,0 +1,2 @@
+Octree cells: wrong --> 288
+Voxel cells: wrong --> 2097152 (i.e. 128*128*128)

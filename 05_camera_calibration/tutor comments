@@ -1,0 +1,11 @@
+You are not supposed to modify include/camera_calibration/FileIO.h 
+
+Without your modifications, the code will pass the test cases.
+
+-------------------------------------------------------------------
+* function cameraPose:
+
+You did not scale the last column of r1r2t. 
+
+-------------------------------------------------------------------
+The programming style should be enhanced.
