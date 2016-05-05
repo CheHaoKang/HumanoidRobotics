@@ -1,0 +1,22 @@
+function getClosestNodeInList:
+
+Instead of setting the distance variable initially to a big number 10000, you can set it to infifnity; this will be more generic:
+
+double dist = std::numeric_limits<double>::infinity();
+
+function getNeighbors:
+
+Instead of that, you can just loop directly with dx:-1->1 and dy:-1->1 and then check inside the loop for all the necessary conditions.
+
+for (int dx = -1; dx <= 1; ++dx)                                            
+	for (int dy = -1; dy <= 1; ++dy)
+
+
+function addNearestNeighbor:
+
+Instead of recomputing the distance to get closest neighbor, you can make use of getClosestNodeInList to get closest node in the list of neighbors.
+
+Also, you forgot to check that the closest neighbor is not NULL:
+
+if (minNode != NULL)
+

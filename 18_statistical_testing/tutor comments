@@ -1,0 +1,15 @@
+function  oneSampleZTest:
+
+In the case of two-tailed (equal and different), you did not set the left and right boundries correct (however, it just could pass the test case by luck). It should be:
+
+double left_boundry = (1-confidenceLevel)/2;
+double right_boundry = 1-left_boundry;
+
+Because the probablity of (1-confidenceLevel) is divided in this case between the two tails of the distribution.
+
+
+function oneSampleTTest:
+
+The condition of the At_Least case is wrong. It should be:
+
+if (tscore < -tlookup )

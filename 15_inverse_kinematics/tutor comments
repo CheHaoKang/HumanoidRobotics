@@ -1,0 +1,33 @@
+* function InverseKinematics_2Links::forwardKinematic:
+
+You did not convert correctly from homogeneous to Euclidean coordinates. You forgot to divide by the 3rd item in endeffector.
+
+e[0] = e_pose[0]/e_pose[2];
+e[1] = e_pose[1]/e_pose[2]; 
+
+* function InverseKinematics_2Links::jacobian:
+
+You computed it wrong.
+
+result	<< -((h + a1) * cos((double) q(1)) + a0) * sin((double) q(0)) - ((h + a1) * sin((double) q(1))) * cos((double) q(0)), 
+	   - (h + a1) * cos((double) q(0))       * sin((double) q(1)) -  (h + a1) * sin((double) q(0))  * cos((double) q(1)),  
+	    ((h + a1) * cos((double) q(1)) + a0) * cos((double) q(0)) -  (h + a1) * sin((double) q(1))  * sin((double) q(0)),  
+	   - (h + a1) * sin((double) q(0))       * sin((double) q(1)) +  (h + a1) * cos((double) q(0))  * cos((double) q(1));  
+
+
+* function InverseKinematics::oneIteration:
+
+You forgot to set q to q_new which you computed.
+
+q = q_new;
+
+
+* function InverseKinematics_2Links::computeIK:
+
+The while loop condition is wrong (it should be reversed), you must keep iterating as long as the the endeffector is far from the goal. 
+Moreoevr, the distance must be computed from inside the loop, otherwise it will be an infinite loop. 
+
+while ((e - g).norm() > maxTranslationalError)
+
+
+

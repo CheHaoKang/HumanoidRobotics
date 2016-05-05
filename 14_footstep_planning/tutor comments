@@ -1,0 +1,7 @@
+function executeFootstep:
+
+The equations of x and y are wrong, these are the correct 
+
+x = currentFootstep->x + cos(currentFootstep->theta) * action.dx + sin(currentFootstep->theta) * action.dy;  
+y = currentFootstep->y - sin(currentFootstep->theta) * action.dx + cos(currentFootstep->theta) * action.dy;  
+
